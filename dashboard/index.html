@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peer-Priced Radar — every protocol accounted for</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="brand">PEER-PRICED RADAR <span id="ver"></span></div>
+  <h1 id="headline">Every one of the snapshot's protocols, accounted for — and a price that had to beat its own control to ship.</h1>
+  <p class="sub" id="subline"></p>
+</header>
+
+<section class="strip" id="kpi"></section>
+
+<section class="panel">
+  <h2>The model, graded before it grades anyone</h2>
+  <p class="note">Error = median |log10 of predicted / actual market cap| on the peer set (0.30 ≈ a typical factor of two). The control prices every protocol by the <em>other</em> regime's fit: if the split were decoration, the control would tie. The baseline is one flat median multiple, no features at all.</p>
+  <table id="schemes"></table>
+  <h3>Every term was offered, fitted, and voted on by both primary holdouts</h3>
+  <table id="ablations"></table>
+  <p class="note" id="oddsline"></p>
+</section>
+
+<section class="panel">
+  <h2>The full accounting — nothing silently dropped</h2>
+  <div id="accounting" class="acct"></div>
+</section>
+
+<section class="panel">
+  <div class="boardhead">
+    <h2 id="boardtitle">The board</h2>
+    <div class="tools">
+      <input id="q" type="search" placeholder="Search name, slug, category…">
+      <select id="fregime"><option value="">Both regimes</option><option value="momentum">Momentum</option><option value="reversion">Reversion</option></select>
+      <select id="fverdict"><option value="">All verdicts</option><option value="front of the queue">Front of the queue</option><option value="worth the hours">Worth the hours</option><option value="watch only">Watch only</option></select>
+      <label class="wl"><input type="checkbox" id="fwl"> Watchlist only</label>
+    </div>
+  </div>
+  <table id="board"></table>
+  <p class="note" id="boardnote"></p>
+</section>
+
+<aside class="detail" id="detail" hidden></aside>
+
+<section class="panel">
+  <h2>Already trading — the peer record the prices lean on</h2>
+  <table id="live"></table>
+</section>
+
+<footer class="foot" id="foot"></footer>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
